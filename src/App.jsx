@@ -5,6 +5,7 @@ import './App.css'
 import Box from './ComponentsJS/Box'
 import Counter from './ComponentsJS/Counter'
 import Real from './ComponentsJS/RealInput'
+import Fetch from './ComponentsJS/Fetch'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -34,6 +35,7 @@ function App() {
       <Box></Box>
       <Counter></Counter>
       <Real></Real>
+      <Fetch/>
     </>
   )
 }
