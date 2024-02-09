@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Box from './ComponentsJS/Box'
 import Counter from './ComponentsJS/Counter'
+import Real from './ComponentsJS/RealInput'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,6 +33,7 @@ function App() {
       </p>
       <Box></Box>
       <Counter></Counter>
+      <Real></Real>
     </>
   )
 }
