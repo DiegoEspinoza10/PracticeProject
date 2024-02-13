@@ -7,6 +7,7 @@ import Counter from './ComponentsJS/Counter'
 import Real from './ComponentsJS/RealInput'
 import Fetch from './ComponentsJS/Fetch'
 import Timer from './ComponentsJS/Timer'
+import RandomQuote from './ComponentsJS/RandomQuote'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ function App() {
       <Counter></Counter>
       <Real></Real>
       <Timer></Timer>
+      <RandomQuote></RandomQuote>
       <Fetch/>
       </div>
   )
