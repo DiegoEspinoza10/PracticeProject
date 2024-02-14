@@ -8,21 +8,36 @@ import Real from './ComponentsJS/RealInput'
 import Fetch from './ComponentsJS/Fetch'
 import Timer from './ComponentsJS/Timer'
 import RandomQuote from './ComponentsJS/RandomQuote'
+import PropsName from './ComponentsJS/PropsName'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [name, setName] = useState('');
+  const [submittedName, setSubmittedName] = useState('');
+
+  const handleInputChange = (event) => {
+    setName(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); 
+    setSubmittedName(name);
+    setName(''); 
+  };
 
   return (
-      
-      <div>
+    <div>
       <Box></Box>
       <Counter></Counter>
       <Real></Real>
       <Timer></Timer>
       <RandomQuote></RandomQuote>
-      <Fetch/>
-      </div>
-  )
+      <Fetch />
+      <form onSubmit={handleSubmit}>
+        <input type="text" value={name} onChange={handleInputChange} />
+        <button type="submit">Submit</button>
+      </form>
+      <PropsName name={submittedName}></PropsName>
+    </div>
+  );
 }
-
 export default App
